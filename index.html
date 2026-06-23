@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>למידאטה | Lemidata - מוצאים מקום ללמוד שמתאים ליום שלך</title>
+  <meta name="description" content="למידאטה היא פלטפורמת דמו לסטודנטים המאפשרת למצוא את מקום הלימוד המושלם לפי מה שחשוב לך היום: שקט, קפה, שקעים, אווירה או חברים.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- 1. Header / Navigation -->
+  <header id="header">
+    <div class="container">
+      <!-- Clean Brand Area with Logo Wrap, Name, and Slogan Tagline -->
+      <a href="#" class="logo-link" aria-label="עמוד הבית של למידאטה">
+        <div class="brand">
+          <div class="brand-logo-wrap">
+            <img src="public/assets/lemidata-logo.png" alt="למידאטה">
+          </div>
+          <div class="brand-text">
+            <strong class="brand-name">למידאטה</strong>
+            <span class="brand-slogan">☕ כי לא כל קפה הוא מקום ללמוד בו</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Navigation links centered on desktop -->
+      <nav aria-label="ניווט ראשי">
+        <ul class="nav-links">
+          <li><a href="#how-it-works">איך זה עובד</a></li>
+          <li><a href="#personalized-quiz">התאמה אישית</a></li>
+          <li><a href="#featured-spots">מקומות מומלצים</a></li>
+          <li><a href="#submit-spot">שלחו מקום</a></li>
+        </ul>
+      </nav>
+
+      <!-- CTA: מצאו לי מקום on the left -->
+      <div class="nav-cta-wrapper">
+        <a href="#personalized-quiz" class="btn btn-primary nav-cta">מצאו לי מקום</a>
+      </div>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button class="menu-toggle" id="menu-toggle" aria-label="פתח תפריט ניווט">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Sidebar -->
+  <div class="mobile-nav-overlay" id="menu-overlay"></div>
+  <aside class="mobile-sidebar" id="mobile-sidebar" aria-label="תפריט נייד">
+    <div class="sidebar-header">
+      <div class="sidebar-logo-card">
+        <img src="public/assets/lemidata-logo.png" alt="למידאטה" class="sidebar-logo-img">
+      </div>
+      <button class="sidebar-close" id="sidebar-close" aria-label="סגור תפריט">&times;</button>
+    </div>
+    <ul class="sidebar-links">
+      <li><a href="#how-it-works" id="mobile-link-how">איך זה עובד</a></li>
+      <li><a href="#personalized-quiz" id="mobile-link-quiz">התאמה אישית</a></li>
+      <li><a href="#featured-spots" id="mobile-link-spots">מקומות מומלצים</a></li>
+      <li><a href="#submit-spot" id="mobile-link-submit">שלחו מקום</a></li>
+    </ul>
+    <a href="#personalized-quiz" class="btn btn-primary sidebar-cta" id="mobile-link-cta">מצאו לי מקום</a>
+  </aside>
+
+  <!-- 2. Hero Section -->
+  <section class="hero section-padding">
+    <div class="container hero-grid">
+      <!-- Right Side: Brand Statement, Headline, value chips -->
+      <div class="hero-content animate-fade-in">
+        <!-- Explanation Badge -->
+        <span class="hero-explanation-badge">מהמלצות באינסטגרם לכלי בחירה אישי</span>
+        
+        <!-- Slogan Tagline -->
+        <div class="hero-slogan-pill">
+          כי לא כל קפה הוא מקום ללמוד בו ☕
+        </div>
+        
+        <!-- Main Headline -->
+        <h1 class="hero-title">מצאנו לך מקום ללמוד</h1>
+        <p class="hero-subtitle">למידאטה עוזרת לסטודנטים למצוא מקום לימוד שמתאים בדיוק למה שהם צריכים עכשיו — שקט, קפה, שקעים, אווירה או חברים.</p>
+        
+        <div class="hero-actions">
+          <a href="#personalized-quiz" class="btn btn-primary">התחילו התאמה</a>
+          <a href="#featured-spots" class="btn btn-secondary">ראו מקומות מומלצים</a>
+        </div>
+        
+        <!-- 3 value chips -->
+        <div class="hero-value-chips">
+          <div class="hero-value-chip">
+            <span class="hero-value-chip-dot"></span>
+            <span>שקט לפי מצב רוח</span>
+          </div>
+          <div class="hero-value-chip">
+            <span class="hero-value-chip-dot"></span>
+            <span>קפה כשצריך</span>
+          </div>
+          <div class="hero-value-chip">
+            <span class="hero-value-chip-dot"></span>
+            <span>מקום שמתאים ללמידה</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Left Side: Animated Brand Logo Sticker and Preview App Card -->
+      <div class="hero-visual-showcase">
+        <!-- Floating Logo Sticker (hero-logo-badge structure) -->
+        <div class="hero-logo-badge">
+          <img src="public/assets/lemidata-logo.png" alt="למידאטה לוגו">
+        </div>
+        
+        <!-- Floating Tags Surrounding Logo (floating-chip structure) -->
+        <div class="floating-tags-container">
+          <span class="floating-chip ft-quiet">🤫 שקט</span>
+          <span class="floating-chip ft-coffee">☕ קפה</span>
+          <span class="floating-chip ft-power">🔌 שקעים</span>
+          <span class="floating-chip ft-atmos">✨ אווירה</span>
+          <span class="floating-chip ft-comfort">🛋️ ספות</span>
+          <span class="floating-chip ft-friends">👥 חברים</span>
+        </div>
+
+        <!-- Premium App Preview Recommendation Card -->
+        <div class="mock-app-preview">
+          <div class="mock-header">
+            <span class="mock-badge">ההמלצה שלך להיום</span>
+            <div class="mock-rating-badge">
+              <span class="mock-rating-star">★</span>
+              <span>4.0</span>
+            </div>
+          </div>
+          <h3 class="mock-place-title">לובי הפקולטה לנתונים</h3>
+          <div class="mock-tags">
+            <span class="mock-tag">👥 אווירה חברתית</span>
+            <span class="mock-tag">🛋️ ספות</span>
+            <span class="mock-tag">☕ קפה קרוב</span>
+          </div>
+          <span class="mock-criteria-title">מדדי המקום:</span>
+          <div class="mock-criteria-list">
+            <div class="mock-criteria-item">
+              <span>נוחות</span>
+              <span class="mock-criteria-score">4/5</span>
+            </div>
+            <div class="mock-criteria-item">
+              <span>אווירה</span>
+              <span class="mock-criteria-score">3/5</span>
+            </div>
+            <div class="mock-criteria-item">
+              <span>אוכל</span>
+              <span class="mock-criteria-score">2.5/5</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. How It Works Section -->
+  <section class="how-it-works section-padding" id="how-it-works">
+    <div class="container">
+      <h2 class="section-title">איך זה עובד?</h2>
+      <p class="section-subtitle">פשוט, מהיר ומבוסס על צרכים אמיתיים של סטודנטים בקמפוס:</p>
+      
+      <div class="how-it-works-steps">
+        <!-- Step 1 -->
+        <div class="step-card">
+          <div class="step-num-badge">1</div>
+          <h3 class="step-title">בוחרים מה חשוב לכם עכשיו</h3>
+          <p class="step-desc">מסמנים את הדברים שבלעדיהם אי אפשר ללמוד היום (שקט מוחלט, שקעים קרובים, קפה קרוב או ספות נוחות).</p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="step-card">
+          <div class="step-num-badge">2</div>
+          <h3 class="step-title">מקבלים התאמה למקום לימוד</h3>
+          <p class="step-desc">מערכת למידאטה סורקת את הדירוגים והנתונים וממליצה מיידית על המיקום האופטימלי ביותר עבורכם.</p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="step-card">
+          <div class="step-num-badge">3</div>
+          <h3 class="step-title">שומרים מקום וממשיכים ללמוד</h3>
+          <p class="step-desc">שומרים את פרטי המקום המוצע, מגיעים ישירות אליו בקמפוס ומתחילים ללמוד בראש שקט בלי סיבובים מיותרים.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Problem Section -->
+  <section class="problems section-padding">
+    <div class="container">
+      <h2 class="section-title">לא כל מקום עם קפה הוא באמת מקום ללמוד</h2>
+      <p class="section-subtitle">כולנו מכירים את הסיבובים המייגעים בקמפוס. המלצות רגילות נראות מעולה, אבל בפועל מתגלים קשיים אמיתיים:</p>
+      
+      <div class="problems-grid">
+        <!-- Problem Card 1 -->
+        <div class="problem-card">
+          <div class="problem-num">01</div>
+          <h3 class="problem-card-title">קפה יש, שקט אין</h3>
+          <p class="problem-card-desc">הגעתם מוכנים לעבודה אינטנסיבית רק כדי לגלות מוזיקה רועשת, רעש פטפוטים חזק או שיפוצים מול החלון.</p>
+        </div>
+
+        <!-- Problem Card 2 -->
+        <div class="problem-card">
+          <div class="problem-num">02</div>
+          <h3 class="problem-card-title">אין שקעים כשצריך</h3>
+          <p class="problem-card-desc">הלפטופ על 12% סוללה, וכל השקעים תפוסים או ממוקמים רחוק מהשולחנות הפנויים. למידה הופכת למצוד שקעים.</p>
+        </div>
+
+        <!-- Problem Card 3 -->
+        <div class="problem-card">
+          <div class="problem-num">03</div>
+          <h3 class="problem-card-title">האווירה לא תמיד מתאימה</h3>
+          <p class="problem-card-desc">המקום אולי יפה לצילום, אבל השולחנות קטנים מדי לעבודה עם לפטופ ומחברת, או שאין וויב למידה תומך.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Solution Section -->
+  <section class="solutions section-padding">
+    <div class="container">
+      <h2 class="section-title">הכלי לקבלת החלטה מהירה</h2>
+      <p class="section-subtitle">במקום להסתמך על המלצה כללית, למידאטה עוזרת לבחור מקום לפי הצורך האמיתי של הסטודנט באותו רגע:</p>
+      
+      <div class="solutions-grid">
+        <!-- Solution 1: Quiet -->
+        <div class="solution-card">
+          <span class="solution-emoji">🤫</span>
+          <span class="solution-card-title">שקט</span>
+        </div>
+
+        <!-- Solution 2: Coffee -->
+        <div class="solution-card">
+          <span class="solution-emoji">☕</span>
+          <span class="solution-card-title">קפה</span>
+        </div>
+
+        <!-- Solution 3: Power Outlets -->
+        <div class="solution-card">
+          <span class="solution-emoji">🔌</span>
+          <span class="solution-card-title">שקעים</span>
+        </div>
+
+        <!-- Solution 4: Atmosphere -->
+        <div class="solution-card">
+          <span class="solution-emoji">✨</span>
+          <span class="solution-card-title">אווירה</span>
+        </div>
+
+        <!-- Solution 5: Comfort -->
+        <div class="solution-card">
+          <span class="solution-emoji">🛋️</span>
+          <span class="solution-card-title">נוחות</span>
+        </div>
+
+        <!-- Solution 6: Friends -->
+        <div class="solution-card">
+          <span class="solution-emoji">👥</span>
+          <span class="solution-card-title">חברים</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Interactive Demo Section (Quiz) -->
+  <section class="demo-quiz section-padding" id="personalized-quiz">
+    <div class="container">
+      <div class="quiz-wrapper">
+        <div class="quiz-card">
+          <div class="quiz-card-header">
+            <h2 class="quiz-card-title">מה חשוב לך היום?</h2>
+            <p class="quiz-card-subtitle">ענו על כמה העדפות וקבלו המלצה לדוגמה (ניתן לבחור מספר קריטריונים):</p>
+          </div>
+          
+          <!-- Big Rounded Chips -->
+          <div class="quiz-chips">
+            <button class="quiz-chip" data-filter="quiet">
+              <span class="quiz-chip-emoji">🤫</span>
+              <span>שקט</span>
+            </button>
+            <button class="quiz-chip" data-filter="coffee">
+              <span class="quiz-chip-emoji">☕</span>
+              <span>קפה קרוב</span>
+            </button>
+            <button class="quiz-chip" data-filter="social">
+              <span class="quiz-chip-emoji">👥</span>
+              <span>אווירה חברתית</span>
+            </button>
+            <button class="quiz-chip" data-filter="power">
+              <span class="quiz-chip-emoji">🔌</span>
+              <span>הרבה שקעים</span>
+            </button>
+            <button class="quiz-chip" data-filter="comfort">
+              <span class="quiz-chip-emoji">🛋️</span>
+              <span>ספות ונוחות</span>
+            </button>
+            <button class="quiz-chip" data-filter="outdoor">
+              <span class="quiz-chip-emoji">🌳</span>
+              <span>מקום פתוח</span>
+            </button>
+          </div>
+
+          <!-- Dynamic Recommendation Card Container -->
+          <div class="recommendation-container">
+            <!-- Default Placeholder State -->
+            <div class="recommendation-placeholder" id="quiz-placeholder">
+              <span class="placeholder-emoji">💡</span>
+              <p class="placeholder-text">בחרו למעלה את מה שאתם צריכים ללמידה כרגע, ונתאים לכם את המקום המושלם!</p>
+            </div>
+
+            <!-- Premium Dynamic Recommendation Card -->
+            <div class="recommendation-card" id="quiz-recommendation-card">
+              <div class="rec-badge-line">
+                <span class="rec-match-pill">התאמה אופטימלית עבורך ✨</span>
+                <div class="rec-rating-badge-top">
+                  <span style="color:#ffb800;">★</span>
+                  <span id="rate-overall">4.0</span>
+                </div>
+              </div>
+              <h4 class="rec-place-name" id="rec-title">לובי הפקולטה לנתונים</h4>
+              <p class="rec-place-desc" id="rec-desc">אווירה סטודנטיאלית, ספות, שולחנות וחברים באזור.</p>
+              
+              <div class="rec-ratings-grid">
+                <div class="rec-rating-card">
+                  <span class="rec-rating-label">שקט</span>
+                  <span class="rec-rating-score" id="rate-quiet">2.5/5</span>
+                </div>
+                <div class="rec-rating-card">
+                  <span class="rec-rating-label">אוכל</span>
+                  <span class="rec-rating-score" id="rate-food">4/5</span>
+                </div>
+                <div class="rec-rating-card">
+                  <span class="rec-rating-label">נוחות</span>
+                  <span class="rec-rating-score" id="rate-comfort">4.5/5</span>
+                </div>
+                <div class="rec-rating-card">
+                  <span class="rec-rating-label">אווירה</span>
+                  <span class="rec-rating-score" id="rate-atmosphere">4.5/5</span>
+                </div>
+                <div class="rec-rating-card">
+                  <span class="rec-rating-label">X-Factor</span>
+                  <span class="rec-rating-score" id="rate-xfactor">5/5</span>
+                </div>
+              </div>
+              
+              <div class="rec-footer-line">
+                <button class="btn btn-primary" id="save-spot-btn">שמרו לי את המקום</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Toast Alert -->
+  <div class="toast" id="toast">
+    <span id="toast-text">המקום נשמר בהצלחה! 📍</span>
+  </div>
+
+  <!-- 7. Featured Study Spots Section -->
+  <section class="featured section-padding" id="featured-spots">
+    <div class="container">
+      <h2 class="section-title">מקומות מומלצים</h2>
+      <p class="section-subtitle">מגוון מקומות מובחרים מהמאגר שלנו, עם הדירוגים המדויקים שנתנו הסטודנטים בשטח:</p>
+      
+      <div class="spots-grid">
+        <!-- Card A: Data Faculty Lobby -->
+        <div class="spot-card">
+          <div class="spot-top">
+            <h3 class="spot-title">לובי הפקולטה לנתונים</h3>
+            <p class="spot-desc">אווירה סטודנטיאלית, ספות, שולחנות וחברים באזור. מתאים למי שרוצה לשלב למידה עם מפגש חברתי קל.</p>
+            <span class="spot-meta-title">למי זה מתאים?</span>
+            <div class="spot-tags">
+              <span class="spot-tag-pill">👥 עבודה קבוצתית</span>
+              <span class="spot-tag-pill">🛋️ חובבי ספות</span>
+              <span class="spot-tag-pill">☕ הפסקות קפה</span>
+            </div>
+          </div>
+          <div class="spot-bottom">
+            <div class="spot-rating-pills-row">
+              <span class="rating-pill rating-overall">★ 4.0</span>
+              <span class="rating-pill">🛋️ נוחות 4</span>
+              <span class="rating-pill">✨ אווירה 3</span>
+              <span class="rating-pill">🚀 X-Factor 5</span>
+            </div>
+            <a href="#personalized-quiz" class="btn btn-secondary nav-cta">ראו דירוג</a>
+          </div>
+        </div>
+
+        <!-- Card B: Ullman Learning Floor -->
+        <div class="spot-card">
+          <div class="spot-top">
+            <h3 class="spot-title">קומת הלמידה באולמן</h3>
+            <p class="spot-desc">שולחנות גדולים, הרבה סטודנטים, מתאים למי שאוהב ללמוד בסביבה פעילה אך מרוכזת ושקטה.</p>
+            <span class="spot-meta-title">למי זה מתאים?</span>
+            <div class="spot-tags">
+              <span class="spot-tag-pill">🤫 למידה שקטה</span>
+              <span class="spot-tag-pill">🔌 מכורי סוללה</span>
+              <span class="spot-tag-pill">💻 מרתוני עבודה</span>
+            </div>
+          </div>
+          <div class="spot-bottom">
+            <div class="spot-rating-pills-row">
+              <span class="rating-pill rating-overall">★ 3.5</span>
+              <span class="rating-pill">🤫 שקט 4.5</span>
+              <span class="rating-pill">🛋️ נוחות 3.5</span>
+              <span class="rating-pill">🍕 אוכל 4.5</span>
+            </div>
+            <a href="#personalized-quiz" class="btn btn-secondary nav-cta">ראו דירוג</a>
+          </div>
+        </div>
+
+        <!-- Card C: Yagur Pool -->
+        <div class="spot-card">
+          <div class="spot-top">
+            <h3 class="spot-title">בריכת יגור</h3>
+            <p class="spot-desc">מקום פתוח, אווירה מיוחדת, מתאים למי שרוצה לשבור שגרה, ליהנות מהשמש וללמוד באוויר הפתוח.</p>
+            <span class="spot-meta-title">למי זה מתאים?</span>
+            <div class="spot-tags">
+              <span class="spot-tag-pill">🌳 למידה בחוץ</span>
+              <span class="spot-tag-pill">🎨 השראה ויצירה</span>
+              <span class="spot-tag-pill">🌬️ אוויר צח</span>
+            </div>
+          </div>
+          <div class="spot-bottom">
+            <div class="spot-rating-pills-row">
+              <span class="rating-pill rating-overall">★ 3.5</span>
+              <span class="rating-pill">✨ אווירה 5</span>
+              <span class="rating-pill">🛋️ נוחות 2.5</span>
+              <span class="rating-pill">🔊 רעש 4</span>
+            </div>
+            <a href="#personalized-quiz" class="btn btn-secondary nav-cta">ראו דירוג</a>
+          </div>
+        </div>
+
+        <!-- Card D: Coffee Cart -->
+        <div class="spot-card">
+          <div class="spot-top">
+            <h3 class="spot-title">עגלת הקפה</h3>
+            <p class="spot-desc">קפה איכותי במיוחד, עצירה אידיאלית בין שיעורים, מתאים ללמידה קצרה או הפסקה מרעננת בקמפוס.</p>
+            <span class="spot-meta-title">למי זה מתאים?</span>
+            <div class="spot-tags">
+              <span class="spot-tag-pill">☕ מכורי קפאין</span>
+              <span class="spot-tag-pill">⏳ למידה קצרה</span>
+              <span class="spot-tag-pill">🥐 נשנוש מהיר</span>
+            </div>
+          </div>
+          <div class="spot-bottom">
+            <div class="spot-rating-pills-row">
+              <span class="rating-pill rating-overall">★ 4.0</span>
+              <span class="rating-pill">🍕 אוכל 4.5</span>
+              <span class="rating-pill">✨ אווירה 4</span>
+              <span class="rating-pill">☕ קפאין 5</span>
+            </div>
+            <a href="#personalized-quiz" class="btn btn-secondary nav-cta">ראו דירוג</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Submit Place Section -->
+  <section class="submit-place section-padding" id="submit-spot">
+    <div class="container">
+      <div class="form-wrapper">
+        <div class="form-card">
+          <div class="quiz-card-header">
+            <h2 class="quiz-card-title">יש לכם מקום ששווה דירוג?</h2>
+            <p class="quiz-card-subtitle">שלחו לנו מקום לימוד, ואולי הוא יופיע בפינה הבאה של למידאטה.</p>
+          </div>
+
+          <!-- Contribution Form -->
+          <form id="suggest-place-form" onsubmit="return false;">
+            <div class="form-group">
+              <label for="place-name" class="form-label">שם מקום הלימוד</label>
+              <input type="text" id="place-name" class="form-input" placeholder="למשל: סקוויר קפה, הקומה השנייה בספרייה..." required>
+            </div>
+
+            <div class="form-group">
+              <label for="place-special" class="form-label">מה הופך אותו למיוחד?</label>
+              <textarea id="place-special" class="form-input" placeholder="ספרו על האווירה, זמני העומס, הנגישות לשקעים או איכות הקפה..." required></textarea>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">מה המאפיין הכי חזק שלו?</label>
+              <div class="form-chips">
+                <input type="checkbox" id="tag-quiet" class="form-checkbox-input" value="שקט">
+                <label for="tag-quiet" class="form-checkbox-label">🤫 שקט</label>
+
+                <input type="checkbox" id="tag-coffee" class="form-checkbox-input" value="קפה">
+                <label for="tag-coffee" class="form-checkbox-label">☕ קפה</label>
+
+                <input type="checkbox" id="tag-friends" class="form-checkbox-input" value="חברים">
+                <label for="tag-friends" class="form-checkbox-label">👥 חברים</label>
+
+                <input type="checkbox" id="tag-power" class="form-checkbox-input" value="שקעים">
+                <label for="tag-power" class="form-checkbox-label">🔌 שקעים</label>
+
+                <input type="checkbox" id="tag-atmosphere" class="form-checkbox-input" value="אווירה">
+                <label for="tag-atmosphere" class="form-checkbox-label">✨ אווירה</label>
+              </div>
+            </div>
+
+            <div class="submit-btn-wrap">
+              <button type="submit" class="btn btn-primary" style="width: 100%;">שלחו לנו מקום</button>
+            </div>
+          </form>
+
+          <!-- Success Message -->
+          <div class="form-success-panel" id="form-success-message">
+            <svg class="success-check-icon" viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+            </svg>
+            <h4 class="success-header">תודה! המקום נשלח לצוות למידאטה לבדיקה.</h4>
+            <p class="success-text">נבצע אימות נתונים קצר ונוסיף אותו למאגר בהקדם האפשרי.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. Instagram CTA Section -->
+  <section class="instagram-cta section-padding">
+    <div class="container">
+      <div class="instagram-container">
+        <!-- Clickable Instagram Icon Wrapper -->
+        <a href="https://www.instagram.com/lemidata_/" target="_blank" rel="noopener noreferrer" class="insta-icon-link" aria-label="מעבר לעמוד האינסטגרם של למידאטה">
+          <div class="insta-icon-wrapper">
+            <svg class="insta-icon-svg" viewBox="0 0 24 24">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+            </svg>
+          </div>
+        </a>
+        <h2 class="instagram-title">עקבו אחרי למידאטה לעוד מקומות ששווה באמת ללמוד בהם</h2>
+        <p class="instagram-desc">קבלו מקומות לימוד חדשים, טיפים, עדכונים מהשטח ודירוגים בלעדיים של קהילת הסטודנטים.</p>
+        <a href="https://www.instagram.com/lemidata_/" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); border:none; box-shadow: 0 8px 24px rgba(220, 39, 67, 0.3);">
+          לעמוד האינסטגרם
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo-card">
+            <img src="public/assets/lemidata-logo.png" alt="למידאטה" class="footer-logo-img">
+          </div>
+          <span class="footer-tagline">“כי לא כל קפה הוא מקום ללמוד בו”</span>
+          <p class="footer-desc">למידאטה הוקמה כדי לייעל את תהליך קבלת ההחלטות של סטודנטים בחיפוש אחר סביבת לימודים אופטימלית בקמפוס ומחוצה לו.</p>
+        </div>
+
+        <div class="footer-nav">
+          <span class="footer-nav-title">ניווט מהיר</span>
+          <a href="#">דף הבית</a>
+          <a href="#how-it-works">איך זה עובד</a>
+          <a href="#personalized-quiz">התאמה אישית</a>
+          <a href="#featured-spots">מקומות מומלצים</a>
+          <a href="https://www.instagram.com/lemidata_/" target="_blank" rel="noopener noreferrer">עקבו באינסטגרם 📸</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-copy">
+          &copy; 2026 למידאטה / Lemidata. כל הזכויות שמורות.
+        </div>
+        <div class="footer-credits">
+          פרויקט סטודנטים לשיפור הלמידה בקמפוס 🎓
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
