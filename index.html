@@ -19,8 +19,7 @@
             <img src="public/assets/lemidata-logo.png" alt="למידאטה">
           </div>
           <div class="brand-text">
-            <strong class="brand-name">למידאטה</strong>
-            <span class="brand-slogan">☕ כי לא כל קפה הוא מקום ללמוד בו</span>
+            <strong class="brand-name">למידאטה - LemiData</strong>
           </div>
         </div>
       </a>
@@ -362,11 +361,6 @@
     </div>
   </section>
 
-  <!-- Toast Alert -->
-  <div class="toast" id="toast">
-    <span id="toast-text">המקום נשמר בהצלחה! 📍</span>
-  </div>
-
   <!-- 7. Featured Study Spots Section -->
   <section class="featured section-padding" id="featured-spots">
     <div class="container">
@@ -536,7 +530,25 @@
         <div class="app-cta-card">
           <h2 class="app-cta-title">רוצים למצוא את מקום הלמידה הבא שלכם באמת?</h2>
           <p class="app-cta-desc">באפליקציה של למידאטה תוכלו לסנן מקומות לפי מה שחשוב לכם, לשמור מיקומים שאהבתם ולגלות המלצות נוספות מהמאגר המלא.</p>
-          <a href="#" class="btn btn-primary">עברו לאפליקציה</a>
+          <div class="store-teaser" aria-label="חנויות האפליקציות">
+            <span class="store-teaser-title">חפשו אותנו בחנויות האפליקציות</span>
+            <div class="store-badges">
+              <span class="store-badge">
+                <span class="store-icon" aria-hidden="true"></span>
+                <span>
+                  <small>בקרוב ב־</small>
+                  <strong>App Store</strong>
+                </span>
+              </span>
+              <span class="store-badge">
+                <span class="store-icon" aria-hidden="true">▶</span>
+                <span>
+                  <small>בקרוב ב־</small>
+                  <strong>Google Play</strong>
+                </span>
+              </span>
+            </div>
+          </div>
         </div>
 
         <!-- Clickable Instagram Icon Wrapper -->
@@ -547,8 +559,8 @@
             </svg>
           </div>
         </a>
-        <h2 class="instagram-title">עקבו אחרי למידאטה לעוד מקומות ששווה באמת ללמוד בהם</h2>
-        <p class="instagram-desc">קבלו מקומות לימוד חדשים, טיפים, עדכונים מהשטח ודירוגים בלעדיים של קהילת הסטודנטים.</p>
+        <h2 class="instagram-title">עקבו אחרינו גם באינסטגרם</h2>
+        <p class="instagram-desc">להישאר מעודכנים</p>
         <a href="https://www.instagram.com/lemidata_/" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); border:none; box-shadow: 0 8px 24px rgba(220, 39, 67, 0.3);">
           לעמוד האינסטגרם
         </a>
@@ -559,31 +571,85 @@
   <!-- 10. Footer -->
   <footer>
     <div class="container">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <div class="footer-logo-card">
-            <img src="public/assets/lemidata-logo.png" alt="למידאטה" class="footer-logo-img">
+      <div class="testimonials-section" aria-label="ביקורות סטודנטים">
+        <div class="testimonials-header">
+          <span class="testimonials-kicker">סטודנטים מספרים</span>
+          <h2 class="testimonials-title">ביקורות מסטודנטים שכבר התחילו ללמוד במקום המושלם עבורם</h2>
+        </div>
+
+        <div class="testimonials-marquee">
+          <div class="testimonials-track">
+            <article class="testimonial-card">
+              <p>״למידאטה ממש הצילה לי את תקופת המבחנים. במקום לבזבז זמן על חיפוש מקום שקט, מצאתי תוך רגע איפה הכי נוח ללמוד.״</p>
+              <div>
+                <strong>דניאל</strong>
+                <span>סטודנטית בטכניון</span>
+              </div>
+            </article>
+            <article class="testimonial-card">
+              <p>״סוף סוף מקום אחד שמרכז מקומות לימוד כמו שאני צריך. זה הפך את ימי הלמידה בקמפוס להרבה פחות מתסכלים.״</p>
+              <div>
+                <strong>יואב</strong>
+                <span>סטודנט להנדסה</span>
+              </div>
+            </article>
+            <article class="testimonial-card">
+              <p>״האפשרות לסנן לפי שקט, שקעים וקפה קרוב בדיוק מה שהייתי צריכה לפני מבחנים. מרגיש כאילו מישהו בנה את זה בשבילנו.״</p>
+              <div>
+                <strong>מאיה</strong>
+                <span>שנה ב׳</span>
+              </div>
+            </article>
+            <article class="testimonial-card">
+              <p>״במקום להסתובב חצי שעה בין בניינים, אני פשוט בודק בלמידאטה ומוצא מקום שמתאים למה שאני צריך באותו יום.״</p>
+              <div>
+                <strong>עומר</strong>
+                <span>סטודנט למדעי הנתונים</span>
+              </div>
+            </article>
+            <article class="testimonial-card">
+              <p>״הביקורות והדירוגים חסכו לי מלא זמן. במיוחד בתקופת מבחנים, זה בדיוק הכלי שחסר לסטודנטים.״</p>
+              <div>
+                <strong>נועה</strong>
+                <span>סטודנטית שנה ג׳</span>
+              </div>
+            </article>
+            <article class="testimonial-card" aria-hidden="true">
+              <p>״למידאטה ממש הצילה לי את תקופת המבחנים. במקום לבזבז זמן על חיפוש מקום שקט, מצאתי תוך רגע איפה הכי נוח ללמוד.״</p>
+              <div>
+                <strong>דניאל</strong>
+                <span>סטודנטית בטכניון</span>
+              </div>
+            </article>
+            <article class="testimonial-card" aria-hidden="true">
+              <p>״סוף סוף מקום אחד שמרכז מקומות לימוד כמו שאני צריך. זה הפך את ימי הלמידה בקמפוס להרבה פחות מתסכלים.״</p>
+              <div>
+                <strong>יואב</strong>
+                <span>סטודנט להנדסה</span>
+              </div>
+            </article>
+            <article class="testimonial-card" aria-hidden="true">
+              <p>״האפשרות לסנן לפי שקט, שקעים וקפה קרוב בדיוק מה שהייתי צריכה לפני מבחנים. מרגיש כאילו מישהו בנה את זה בשבילנו.״</p>
+              <div>
+                <strong>מאיה</strong>
+                <span>שנה ב׳</span>
+              </div>
+            </article>
+            <article class="testimonial-card" aria-hidden="true">
+              <p>״במקום להסתובב חצי שעה בין בניינים, אני פשוט בודק בלמידאטה ומוצא מקום שמתאים למה שאני צריך באותו יום.״</p>
+              <div>
+                <strong>עומר</strong>
+                <span>סטודנט למדעי הנתונים</span>
+              </div>
+            </article>
+            <article class="testimonial-card" aria-hidden="true">
+              <p>״הביקורות והדירוגים חסכו לי מלא זמן. במיוחד בתקופת מבחנים, זה בדיוק הכלי שחסר לסטודנטים.״</p>
+              <div>
+                <strong>נועה</strong>
+                <span>סטודנטית שנה ג׳</span>
+              </div>
+            </article>
           </div>
-          <span class="footer-tagline">“כי לא כל קפה הוא מקום ללמוד בו”</span>
-          <p class="footer-desc">למידאטה הוקמה כדי לייעל את תהליך קבלת ההחלטות של סטודנטים בחיפוש אחר סביבת לימודים אופטימלית בקמפוס ומחוצה לו.</p>
-        </div>
-
-        <div class="footer-nav">
-          <span class="footer-nav-title">ניווט מהיר</span>
-          <a href="#">דף הבית</a>
-          <a href="#how-it-works">איך זה עובד</a>
-          <a href="#personalized-quiz">התאמה אישית</a>
-          <a href="#featured-spots">מקומות מומלצים</a>
-          <a href="https://www.instagram.com/lemidata_/" target="_blank" rel="noopener noreferrer">עקבו באינסטגרם 📸</a>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <div class="footer-copy">
-          &copy; 2026 למידאטה / Lemidata. כל הזכויות שמורות.
-        </div>
-        <div class="footer-credits">
-          פרויקט סטודנטים לשיפור הלמידה בקמפוס 🎓
         </div>
       </div>
     </div>

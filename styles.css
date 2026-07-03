@@ -150,6 +150,15 @@ button, input, select, textarea {
   }
 }
 
+@keyframes testimonialsMarquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(50%);
+  }
+}
+
 .animate-fade-in {
   animation: fadeInUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
@@ -190,30 +199,29 @@ header .container {
 }
 
 .brand-logo-wrap {
-  width: 42px;
-  height: 42px;
+  width: 46px;
+  height: 46px;
   border-radius: 999px;
-  background: #ffffff;
+  background: transparent;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 6px 16px rgba(7, 59, 58, 0.12);
-  border: 1px solid rgba(7, 59, 58, 0.06);
+  box-shadow: 0 8px 18px rgba(7, 59, 58, 0.12);
 }
 
 .brand-logo-wrap img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
-  transform: scale(var(--header-logo-scale, 1.18));
+  transform: scale(1.2);
   display: block;
 }
 
 .brand-text {
   display: flex;
-  flex-direction: column;
+  align-items: center;
   gap: 2px;
   line-height: 1.1;
 }
@@ -223,12 +231,6 @@ header .container {
   font-weight: 900;
   color: var(--primary-teal);
   letter-spacing: -0.5px;
-}
-
-.brand-slogan {
-  font-size: 0.8rem;
-  font-weight: 700;
-  color: var(--text-muted);
 }
 
 nav {
@@ -464,13 +466,12 @@ nav {
   width: var(--hero-logo-size, 118px);
   height: var(--hero-logo-size, 118px);
   border-radius: 999px;
-  background: #ffffff;
+  background: transparent;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: 0 18px 42px rgba(7, 59, 58, 0.18);
-  border: 1px solid rgba(7, 59, 58, 0.08);
   z-index: 5;
   margin-bottom: -30px;
   animation: floatLogo 6s ease-in-out infinite;
@@ -479,9 +480,9 @@ nav {
 .hero-logo-badge img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center center;
-  transform: scale(var(--hero-logo-scale)) translateY(var(--hero-logo-y));
+  transform: scale(1.24);
   display: block;
 }
 
@@ -1309,6 +1310,71 @@ textarea.form-input {
   line-height: 1.7;
 }
 
+.store-teaser {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  margin-top: 4px;
+}
+
+.store-teaser-title {
+  font-size: 1.05rem;
+  font-weight: 900;
+  color: var(--primary-teal);
+}
+
+.store-badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.store-badge {
+  min-width: 168px;
+  background-color: var(--primary-teal);
+  color: var(--bg-white);
+  border-radius: 18px;
+  padding: 12px 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  box-shadow: 0 10px 24px rgba(7, 59, 58, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.store-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.12);
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.store-badge small,
+.store-badge strong {
+  display: block;
+  line-height: 1.15;
+  text-align: right;
+}
+
+.store-badge small {
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 700;
+}
+
+.store-badge strong {
+  font-size: 1.05rem;
+  font-weight: 900;
+}
+
 .insta-icon-wrapper {
   width: 70px;
   height: 70px;
@@ -1344,101 +1410,106 @@ textarea.form-input {
 footer {
   background-color: var(--primary-teal);
   color: rgba(255, 255, 255, 0.7);
-  padding: 80px 0 40px 0;
+  padding: 76px 0 54px 0;
   font-size: 0.95rem;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
+  overflow: hidden;
 }
 
-.footer-top {
-  display: grid;
-  grid-template-columns: 1.35fr 0.65fr;
-  gap: var(--spacing-lg);
-  margin-bottom: 60px;
-  align-items: flex-start;
+.testimonials-section {
+  margin-bottom: 0;
 }
 
-.footer-brand {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+.testimonials-header {
+  text-align: center;
+  margin-bottom: 28px;
 }
 
-.footer-logo-card {
-  background-color: var(--bg-white);
-  padding: 6px 14px;
-  border-radius: var(--radius-sm);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  align-self: flex-start;
-  transition: transform 0.3s ease;
-}
-
-.footer-logo-card:hover {
-  transform: rotate(-2deg);
-}
-
-.footer-logo-img {
-  height: 40px;
-  width: auto;
-  object-fit: contain;
-}
-
-.footer-tagline {
-  font-size: 1.35rem;
-  font-weight: 800;
-  color: var(--bg-white);
-  letter-spacing: -0.5px;
-}
-
-.footer-desc {
-  max-width: 440px;
-  font-size: 0.9rem;
-  line-height: 1.6;
-  color: rgba(255, 255, 255, 0.55);
-}
-
-.footer-nav {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-
-.footer-nav-title {
-  color: var(--bg-white);
-  font-weight: 800;
-  font-size: 1rem;
-  text-transform: uppercase;
-  margin-bottom: 8px;
-  position: relative;
-  display: inline-block;
-}
-
-.footer-nav a {
-  color: rgba(255, 255, 255, 0.7);
-}
-
-.footer-nav a:hover {
+.testimonials-kicker {
   color: var(--accent-orange);
-  transform: translateX(-4px);
+  font-size: 0.95rem;
+  font-weight: 900;
 }
 
-.footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  padding-top: 36px;
+.testimonials-title {
+  color: var(--bg-white);
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 1.25;
+  margin-top: 8px;
+}
+
+.testimonials-marquee {
+  position: relative;
+  overflow: hidden;
+  margin-inline: calc(var(--spacing-md) * -1);
+  padding: 6px 0 10px;
+}
+
+.testimonials-marquee::before,
+.testimonials-marquee::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 90px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.testimonials-marquee::before {
+  right: 0;
+  background: linear-gradient(270deg, var(--primary-teal), rgba(7, 59, 58, 0));
+}
+
+.testimonials-marquee::after {
+  left: 0;
+  background: linear-gradient(90deg, var(--primary-teal), rgba(7, 59, 58, 0));
+}
+
+.testimonials-track {
   display: flex;
+  width: max-content;
+  gap: 18px;
+  animation: testimonialsMarquee 42s linear infinite;
+}
+
+.testimonials-marquee:hover .testimonials-track {
+  animation-play-state: paused;
+}
+
+.testimonial-card {
+  width: 320px;
+  min-height: 214px;
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
   gap: 20px;
 }
 
-.footer-copy {
-  font-size: 0.85rem;
+.testimonial-card p {
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 0.98rem;
+  line-height: 1.7;
 }
 
-.footer-credits {
-  font-size: 0.85rem;
+.testimonial-card strong {
+  display: block;
+  color: var(--bg-white);
+  font-size: 1.05rem;
+  font-weight: 900;
+}
+
+.testimonial-card span {
+  display: block;
+  color: rgba(255, 255, 255, 0.56);
+  font-size: 0.88rem;
+  margin-top: 2px;
 }
 
 /* Off-canvas Mobile Sidebar drawer navigation */
@@ -1491,15 +1562,20 @@ footer {
 }
 
 .sidebar-logo-card {
-  background-color: var(--bg-cream);
-  padding: 8px 16px;
-  border-radius: var(--radius-sm);
+  background-color: transparent;
+  padding: 0;
+  border-radius: 999px;
   display: inline-flex;
+  overflow: hidden;
+  box-shadow: 0 8px 18px rgba(7, 59, 58, 0.12);
 }
 
 .sidebar-logo-img {
-  height: 36px;
-  width: auto;
+  height: 46px;
+  width: 46px;
+  object-fit: cover;
+  transform: scale(1.2);
+  display: block;
 }
 
 .sidebar-close {
@@ -1612,10 +1688,6 @@ footer {
     min-height: 440px;
   }
 
-  .brand-slogan {
-    display: none;
-  }
-
   .floating-chip {
     display: none;
   }
@@ -1660,9 +1732,8 @@ footer {
     padding: 32px 20px;
   }
 
-  .footer-top {
-    grid-template-columns: 1fr;
-    gap: var(--spacing-md);
+  .testimonials-title {
+    font-size: 1.65rem;
   }
 }
 
@@ -1700,6 +1771,18 @@ footer {
 
   .rec-footer-line .btn {
     width: 100%;
+  }
+
+  .store-badges {
+    width: 100%;
+  }
+
+  .store-badge {
+    width: 100%;
+  }
+
+  .testimonial-card {
+    width: 280px;
   }
   
   .spot-bottom {

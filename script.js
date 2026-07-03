@@ -193,22 +193,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ==========================================
-  // 4. Save Place Action (Toast)
-  // ==========================================
-  const saveSpotBtn = document.getElementById('save-spot-btn');
-  const toast = document.getElementById('toast');
-
-  saveSpotBtn.addEventListener('click', () => {
-    toast.classList.add('show');
-    
-    // Auto hide after 3 seconds
-    setTimeout(() => {
-      toast.classList.remove('show');
-    }, 3000);
-  });
-
-
-  // ==========================================
   // 5. Submit Place Form Mockup Logic
   // ==========================================
   const form = document.getElementById('suggest-place-form');
