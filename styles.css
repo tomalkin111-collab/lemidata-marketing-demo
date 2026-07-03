@@ -405,8 +405,14 @@ nav {
 
 .hero-actions {
   display: flex;
+  flex-wrap: wrap;
   gap: 16px;
   margin-top: 8px;
+}
+
+.hero-actions .btn {
+  line-height: 1.35;
+  text-align: center;
 }
 
 /* Value Chips */
@@ -771,7 +777,7 @@ nav {
 
 .solutions-grid {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(7, 1fr);
   gap: 16px;
   margin-top: 20px;
 }
@@ -926,6 +932,15 @@ nav {
   font-weight: 600;
   max-width: 320px;
   line-height: 1.5;
+}
+
+.quiz-app-teaser {
+  margin: 22px auto 0;
+  max-width: 680px;
+  color: var(--text-muted);
+  font-size: 0.98rem;
+  line-height: 1.7;
+  text-align: center;
 }
 
 .recommendation-card {
@@ -1263,7 +1278,35 @@ textarea.form-input {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--spacing-sm);
+  gap: var(--spacing-md);
+}
+
+.app-cta-card {
+  width: 100%;
+  background-color: var(--bg-white);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+  padding: 42px 34px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: var(--spacing-sm);
+}
+
+.app-cta-title {
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--primary-teal);
+  line-height: 1.25;
+}
+
+.app-cta-desc {
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  max-width: 560px;
+  line-height: 1.7;
 }
 
 .insta-icon-wrapper {
