@@ -199,8 +199,8 @@ header .container {
 }
 
 .brand-logo-wrap {
-  width: 46px;
-  height: 46px;
+  width: 54px;
+  height: 54px;
   border-radius: 999px;
   background: transparent;
   overflow: hidden;
@@ -1314,7 +1314,7 @@ textarea.form-input {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 14px;
+  gap: 16px;
   margin-top: 4px;
 }
 
@@ -1324,55 +1324,11 @@ textarea.form-input {
   color: var(--primary-teal);
 }
 
-.store-badges {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 12px;
-}
-
-.store-badge {
-  min-width: 168px;
-  background-color: var(--primary-teal);
-  color: var(--bg-white);
-  border-radius: 18px;
-  padding: 12px 18px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  box-shadow: 0 10px 24px rgba(7, 59, 58, 0.18);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.store-icon {
-  width: 30px;
-  height: 30px;
-  border-radius: 999px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgba(255, 255, 255, 0.12);
-  font-size: 1.2rem;
-  line-height: 1;
-}
-
-.store-badge small,
-.store-badge strong {
+.store-badges-image {
+  width: min(220px, 100%);
+  height: auto;
   display: block;
-  line-height: 1.15;
-  text-align: right;
-}
-
-.store-badge small {
-  font-size: 0.72rem;
-  color: rgba(255, 255, 255, 0.7);
-  font-weight: 700;
-}
-
-.store-badge strong {
-  font-size: 1.05rem;
-  font-weight: 900;
+  filter: drop-shadow(0 10px 24px rgba(7, 59, 58, 0.14));
 }
 
 .insta-icon-wrapper {
@@ -1773,12 +1729,8 @@ footer {
     width: 100%;
   }
 
-  .store-badges {
-    width: 100%;
-  }
-
-  .store-badge {
-    width: 100%;
+  .store-badges-image {
+    width: min(190px, 100%);
   }
 
   .testimonial-card {
